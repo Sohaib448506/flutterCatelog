@@ -17,7 +17,7 @@ class LoginPage extends StatelessWidget {
           height: 10.0,
         ),
         const Text(
-          "Welcome to Flutter",
+          "Setup Done. Welcome to Flutter",
           style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         ),
         const SizedBox(

@@ -1,4 +1,6 @@
+import 'package:catlogapp/pages/home_page.dart';
 import 'package:catlogapp/pages/login_page.dart';
+import 'package:catlogapp/utils/routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,10 +19,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepPurple,
       ),
       darkTheme: ThemeData(brightness: Brightness.dark),
-      initialRoute: "/login",
+      initialRoute: MyRoutes.loginRoute,
       routes: {
-        "/": (context) => const LoginPage(),
-        "/login": (context) => const LoginPage()
+        MyRoutes.homeRoute: (context) => const HomePage(),
+        MyRoutes.loginRoute: (context) => const LoginPage()
       },
     );
   }

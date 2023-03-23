@@ -6,7 +6,8 @@ class MyDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final imageUrl = "";
+    const imageUrl =
+        "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
     return Drawer(
       child: Container(
         color: Colors.deepPurple,
@@ -15,11 +16,12 @@ class MyDrawer extends StatelessWidget {
             DrawerHeader(
                 padding: EdgeInsets.zero,
                 child: UserAccountsDrawerHeader(
-                  accountName: Text("Sohaib BUtt"),
-                  accountEmail: Text("engrsohaib.dev@gmail.com"),
-                  currentAccountPicture: CircleAvatar(
-                      backgroundImage: AssetImage("assets/images/img2.jpg")),
-                )),
+                    accountName: Text("Sohaib BUtt"),
+                    accountEmail: Text("engrsohaib.dev@gmail.com"),
+                    currentAccountPicture: CircleAvatar(
+                      //backgroundImage: AssetImage("assets/images/img2.jpg")
+                      backgroundImage: NetworkImage(imageUrl),
+                    ))),
             ListTile(
               leading: Icon(CupertinoIcons.home, color: Colors.white),
               title: Text(
